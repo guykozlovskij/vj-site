@@ -15,11 +15,13 @@ body {
   margin: 0;
 }
 
-button {
-  opacity: 0.5;
+main {
+  padding-top: $nav-height;
+}
 
+button {
+  opacity: 0.4;
   &.active {
     opacity: 1;
-    font-weight: bold;
   }
 }
