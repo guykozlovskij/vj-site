@@ -4,13 +4,22 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+}
+
+button {
+  opacity: 0.5;
+
+  &.active {
+    opacity: 1;
+    font-weight: bold;
+  }
 }
