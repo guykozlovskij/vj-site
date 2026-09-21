@@ -1,6 +1,9 @@
 @use "base";
 @use "typography";
 
+// Font imports
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -13,6 +16,9 @@ html {
 
 body {
   margin: 0;
+  font-family: $main-text-content-font;
+  color: $main-text-content-color;
+  background-color: $background-color;
 }
 
 main {
