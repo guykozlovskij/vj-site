@@ -18,7 +18,7 @@ import About from './components/sections/About.vue'
       sunt minim reprehenderit enim est tempor.
     </p>
   </main>
-  <Contact class="container" />
+  <Contact class="container alt-background" />
 </template>
 
 <style scoped lang="scss">
