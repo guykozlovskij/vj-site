@@ -1,16 +1,16 @@
 <script setup>
-import { useLanguage } from '@/composables/useLanguage'
-const { currentLanguage, setLanguage } = useLanguage()
+// import { useLanguage } from '@/composables/useLanguage'
+// const { currentLanguage, setLanguage } = useLanguage()
 </script>
 
 <template>
   <nav>
     <div class="nav-content">
       <p>Viešpaties Judėjimas</p>
-      <div class="language-selector">
-        <button :class="{ active: currentLanguage === 'lt' }" @click="setLanguage('lt')">🇱🇹</button>
-        <button :class="{ active: currentLanguage === 'en' }" @click="setLanguage('en')">🇬🇧</button>
-      </div>
+<!--      <div class="language-selector">-->
+<!--        <button :class="{ active: currentLanguage === 'lt' }" @click="setLanguage('lt')">🇱🇹</button>-->
+<!--        <button :class="{ active: currentLanguage === 'en' }" @click="setLanguage('en')">🇬🇧</button>-->
+<!--      </div>-->
     </div>
   </nav>
 </template>
