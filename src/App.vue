@@ -8,9 +8,9 @@ import Nav from './components/layout/Nav.vue'
   <main>
     <img class="banner-image" src="/images/lithuania-banner.webp" alt="" />
     <div class="welcome container">
-      <h1>Sveiki atvyke</h1>
+      <h1>Sveiki atvykę</h1>
       <h2>
-        Bažynčios Lietuvoje <br />
+        Bažnyčios Lietuvoje <br />
         jus nuoširdžiai sveikina
       </h2>
     </div>
@@ -31,7 +31,7 @@ import Nav from './components/layout/Nav.vue'
       <p class="container">
         Kaip ir visi tikintieji Kristuje, mes esame Jo vieno Kūno, bažnyčios, nariai. Tam, kad
         praktiškai įgyvendintume Kūno vienybę su visais krikščionimis Lietuvoje, mes susirenkame
-        kaip bažnyčia savo miestuose/vietovėse. Mes palaikome bendravimą su daugiau kaip 2 000
+        kaip bažnyčia savo miestuose ir vietovėse. Mes palaikome bendravimą su daugiau kaip 2 000
         vietinių bažnyčių visame pasaulyje, kad išreikštume vieną Kristaus Kūną.
       </p>
       <hr class="section-divider" />
@@ -63,7 +63,7 @@ import Nav from './components/layout/Nav.vue'
             naujo) ir tampa gyvu vieno Kristaus Kūno nariu (Apd 20:21; Jn 3:3; Ef 1:22–23; Rom
             12:5).
           </li>
-          <li>Kristus vėl ateis pasiimti Savo tikinčiųjų pas Save (1 Tes 2:19).</li>
+          <li>Kristus vėl ateis pasiimti Savo tikinčiuosius pas Save (1 Tes 2:19).</li>
         </ul>
       </div>
     </section>
@@ -71,9 +71,9 @@ import Nav from './components/layout/Nav.vue'
       <hr class="section-divider" />
       <div class="container">
         <h2 class="align-center">Mūsų susirinkimai</h2>
-        <h3>Viešpaties Puotos Susirinkimas</h3>
+        <h3 class="align-center">Viešpaties Puotos Susirinkimas</h3>
         <p>
-          Šį susirinkimą pats Viešpats Jėzus įsteigė prieš maždaug 2000 metų. Laužydami duoną ir
+          Šį susirinkimą pats Viešpats Jėzus įsteigė maždaug prieš 2000 metų. Laužydami duoną ir
           gerdami iš taurės, prisimename kainą, kurią Viešpats Jėzus sumokėjo, kad tikintieji galėtų
           sugrįžti pas Dievą ir mėgautis Juo kaip savo gyvybe ir viskuo.
         </p>
@@ -82,7 +82,7 @@ import Nav from './components/layout/Nav.vue'
           puotoje (Apd 20:7; 1 Kor 10:16–17) ir ugdo vieni kitus, dalydamiesi tuo, ką gavo iš
           Viešpaties (1 Kor 14:26, 4).
         </p>
-        <h3>Susirinkimai namuose</h3>
+        <h3 class="align-center">Susirinkimai namuose</h3>
         <p>
           Savaitės eigoje taip pat susitinkame namuose. Kartu giedame, meldžiamės, studijuojame
           Bibliją ir mėgaujamės Viešpačiu bei vieni kitų bendryste.
@@ -90,8 +90,8 @@ import Nav from './components/layout/Nav.vue'
       </div>
       <hr class="section-divider" />
     </section>
+    <Contact />
   </main>
-  <Contact class="container alt-background" />
 </template>
 
 <style scoped lang="scss">
@@ -107,16 +107,17 @@ import Nav from './components/layout/Nav.vue'
   text-align: center;
   font-style: italic;
   h1 {
-    font-size: 45px;
+    font-size: 50px;
     margin-bottom: -10px;
   }
+  h2 {
+    font-size: 30px;
+  }
 }
-
+h2 {
+  font-size: 35px;
+}
 h3 {
-  font-size: 20px;
-}
-
-.align-center {
-  text-align: center;
+  font-size: 25px;
 }
 </style>
