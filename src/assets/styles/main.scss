@@ -23,6 +23,9 @@ body {
 
 main {
   padding-top: $nav-height;
+  p, li {
+    font-size: larger;
+  }
 }
 
 button {
