@@ -10,6 +10,7 @@
         <li>Šiauliuose</li>
         <li>Jonavoje</li>
       </ul>
+
       <p>
         Jei norėtumėte apsilankyti mūsų susirinkime, daugiau sužinoti apie mus ar tiesiog
         pabendrauti apie tikėjimą, parašykite mums el. paštu. <br />Sujungsime jus su tikinčiaisiais

@@ -34,3 +34,8 @@ button {
     opacity: 1;
   }
 }
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}

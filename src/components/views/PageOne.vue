@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="container">
-      <h1>Page 1</h1>
+      <h1>Puslapis Kuriamas</h1>
     </div>
   </main>
 </template>

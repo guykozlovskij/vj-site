@@ -1,15 +1,16 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
+
 // import { useLanguage } from '@/composables/useLanguage'
 // const { currentLanguage, setLanguage } = useLanguage()
 
 const isMenuOpen = ref(false)
 
 const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'Page 1', to: '/page-1' },
-  { label: 'Page 2', to: '/page-2' },
+  { label: 'Pagrindinis', to: '/' },
+  { label: 'Tarnavimas', to: '/page-1' },
+  { label: 'Kalendorius', to: '/page-2' },
 ]
 
 function closeMenu() {
@@ -35,7 +36,7 @@ onUnmounted(() => {
   <!-- Top navigation -->
   <header class="site-header">
     <div class="nav-content">
-      <RouterLink to="/" class="brand-link"> Viešpaties Judėjimas </RouterLink>
+      <RouterLink to="/" class="brand-link"> Bažnyčia Vilniuje </RouterLink>
 
       <!-- Desktop navigation -->
       <nav class="desktop-navigation" aria-label="Main navigation">
@@ -149,7 +150,7 @@ onUnmounted(() => {
   gap: 30px;
 }
 
-/* Navigation links - shared by desktop and mobile */
+/* Navigation links */
 
 .nav-link {
   color: $accent-text-color;
@@ -184,8 +185,14 @@ onUnmounted(() => {
   align-items: center;
   gap: 6px;
 
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
   background: transparent;
   border: none;
+  box-shadow: none;
+  opacity: 1;
   cursor: pointer;
 
   span {
@@ -201,7 +208,7 @@ onUnmounted(() => {
 
   &.is-open {
     span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
     }
 
     span:nth-child(2) {
@@ -209,13 +216,23 @@ onUnmounted(() => {
     }
 
     span:nth-child(3) {
-      transform: translateY(-9px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
     }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
   }
 
   &:focus-visible {
     outline: 2px solid $accent-text-color;
     outline-offset: 3px;
+  }
+
+  &:active {
+    background: transparent;
+    box-shadow: none;
   }
 }
 
@@ -229,11 +246,30 @@ onUnmounted(() => {
   left: 0;
 
   width: 100%;
+  padding: 0;
+  margin: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
   background: rgba(0, 0, 0, 0.45);
   border: none;
+  box-shadow: none;
+  opacity: 1;
   cursor: default;
 
   z-index: 998;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 1;
+  }
 }
 
 /* Mobile slide-out panel */
@@ -244,7 +280,7 @@ onUnmounted(() => {
   right: 0;
   bottom: 0;
 
-  width: min(80vw, 320px);
+  width: min(70vw, 280px);
   padding: 25px 20px;
 
   background-color: $nav-color;
@@ -307,7 +343,6 @@ onUnmounted(() => {
 
   .menu-toggle {
     display: flex;
-    opacity: 1;
   }
 }
 
