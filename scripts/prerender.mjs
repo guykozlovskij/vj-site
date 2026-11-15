@@ -1,4 +1,4 @@
-import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { renderToString } from 'vue/server-renderer'
@@ -70,9 +70,9 @@ try {
     const siteOutput = path.join(outputRoot, '_sites', siteId)
     await mkdir(siteOutput, { recursive: true })
 
-    await writeFile(path.join(siteOutput, 'index.html'), html)
-
-    if (siteId === 'vilnius' && process.env.VERCEL !== '1') {
+    if (siteId !== 'vilnius') {
+      await writeFile(path.join(siteOutput, 'index.html'), html)
+    } else {
       await writeFile(path.join(outputRoot, 'index.html'), html)
     }
 
@@ -81,10 +81,6 @@ try {
       `User-agent: *\nAllow: /\nSitemap: https://${site.hostname}/sitemap.xml\n`,
     )
     await writeFile(path.join(siteOutput, 'sitemap.xml'), createSitemap(site))
-  }
-
-  if (process.env.VERCEL === '1') {
-    await rm(path.join(outputRoot, 'index.html'), { force: true })
   }
 } finally {
   await vite.close()
