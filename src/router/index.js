@@ -1,14 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
 
-import { currentSite } from '@/sites'
-
-const routes = currentSite
-  ? [{ path: '/', name: 'home', component: currentSite.home }]
-  : []
-
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
-})
-
-export default router
+export function createSiteRouter(site, server = false) {
+  return createRouter({
+    history: server ? createMemoryHistory() : createWebHistory(import.meta.env.BASE_URL),
+    routes: [{ path: '/', name: 'home', component: site.home }],
+  })
+}

@@ -3,7 +3,7 @@
 <template>
   <section>
     <div class="container">
-      <h1 class="align-center">Susisiekite su mumis</h1>
+      <h2 class="align-center">Susisiekite su mumis</h2>
       <p>Mūsų susirinkimai vyksta trijuose Lietuvos miestuose:</p>
       <ul>
         <li>Vilniuje</li>
@@ -32,7 +32,7 @@
 <style scoped lang="scss">
 @use 'sass:color';
 
-h1 {
+h2 {
   color: $accent-text-color;
   font-style: italic;
   font-size: 50px;

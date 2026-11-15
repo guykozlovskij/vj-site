@@ -8,9 +8,15 @@ const localities = [
 
 <template>
   <main class="hub-home">
+    <h1 class="visually-hidden">Viešpaties judėjimas Lietuvoje</h1>
     <div class="locality-cards">
-      <a v-for="locality in localities" :key="locality.href" :href="locality.href" class="locality-card">
-        <span class="locality-card__label">{{ locality.label }}</span>
+      <a
+        v-for="locality in localities"
+        :key="locality.href"
+        :href="locality.href"
+        class="locality-card"
+      >
+        <h2 class="locality-card__label">{{ locality.label }}</h2>
         <span class="locality-card__chevron" aria-hidden="true"></span>
       </a>
     </div>
@@ -22,6 +28,18 @@ const localities = [
   min-height: 100vh;
   padding: clamp(24px, 6vw, 64px) 20px;
   background: #f4f0e8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .locality-cards {
@@ -57,6 +75,7 @@ const localities = [
 }
 
 .locality-card__label {
+  margin: 0;
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-size: clamp(24px, 4vw, 40px);
 }
