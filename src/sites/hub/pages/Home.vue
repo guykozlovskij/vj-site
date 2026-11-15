@@ -8,7 +8,7 @@ const localities = [
 
 <template>
   <main class="hub-home">
-    <h1 class="visually-hidden">Viešpaties judėjimas Lietuvoje</h1>
+    <h1 class="visually-hidden">Viešpaties Judėjimas</h1>
     <div class="locality-cards">
       <a
         v-for="locality in localities"

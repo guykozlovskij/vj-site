@@ -30,7 +30,7 @@ export const sites = {
   hub: {
     home: HubHome,
     hostname: 'viespatiesjudejimas.lt',
-    title: 'Viešpaties judėjimas Lietuvoje',
+    title: 'Viešpaties Judėjimas',
     description: 'Bažnyčia Vilniuje · Bažnyčia Šiauliuose · Bažnyčia Jonavoje.',
   },
 }
