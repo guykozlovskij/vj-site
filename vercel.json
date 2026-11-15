@@ -69,6 +69,11 @@
     },
     {
       "source": "/:path*",
+      "has": [{ "type": "host", "value": "baznyciavilniuje.lt" }],
+      "destination": "/_sites/vilnius/index.html"
+    },
+    {
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "baznyciasiauliuose.lt" }],
       "destination": "/_sites/siauliai/index.html"
     },
