@@ -28,21 +28,6 @@
   ],
   "rewrites": [
     {
-      "source": "/",
-      "has": [{ "type": "host", "value": "baznyciasiauliuose.lt" }],
-      "destination": "/_sites/siauliai/index.html"
-    },
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "baznyciajonavoje.lt" }],
-      "destination": "/_sites/jonava/index.html"
-    },
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "viespatiesjudejimas.lt" }],
-      "destination": "/_sites/hub/index.html"
-    },
-    {
       "source": "/robots.txt",
       "has": [{ "type": "host", "value": "baznyciavilniuje.lt" }],
       "destination": "/_sites/vilnius/robots.txt"
@@ -81,6 +66,21 @@
       "source": "/sitemap.xml",
       "has": [{ "type": "host", "value": "viespatiesjudejimas.lt" }],
       "destination": "/_sites/hub/sitemap.xml"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "baznyciasiauliuose.lt" }],
+      "destination": "/_sites/siauliai/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "baznyciajonavoje.lt" }],
+      "destination": "/_sites/jonava/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "viespatiesjudejimas.lt" }],
+      "destination": "/_sites/hub/index.html"
     }
   ]
 }
