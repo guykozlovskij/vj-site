@@ -1,5 +1,6 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { renderToString } from 'vue/server-renderer'
 import vue from '@vitejs/plugin-vue'
@@ -67,20 +68,21 @@ try {
       .replaceAll('__CANONICAL_URL__', `https://${site.hostname}/`)
       .replace('__STRUCTURED_DATA__', structuredData)
 
-    const siteOutput = path.join(outputRoot, '_sites', siteId)
-    await mkdir(siteOutput, { recursive: true })
+    await writeFile(path.join(outputRoot, `site-${siteId}.html`), html)
 
-    if (siteId !== 'vilnius') {
-      await writeFile(path.join(siteOutput, 'index.html'), html)
-    } else {
+    if (siteId === 'vilnius' && env.VERCEL !== '1') {
       await writeFile(path.join(outputRoot, 'index.html'), html)
     }
 
     await writeFile(
-      path.join(siteOutput, 'robots.txt'),
+      path.join(outputRoot, `robots-${siteId}.txt`),
       `User-agent: *\nAllow: /\nSitemap: https://${site.hostname}/sitemap.xml\n`,
     )
-    await writeFile(path.join(siteOutput, 'sitemap.xml'), createSitemap(site))
+    await writeFile(path.join(outputRoot, `sitemap-${siteId}.xml`), createSitemap(site))
+  }
+
+  if (env.VERCEL === '1') {
+    await rm(path.join(outputRoot, 'index.html'), { force: true })
   }
 } finally {
   await vite.close()

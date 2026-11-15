@@ -30,57 +30,62 @@
     {
       "source": "/robots.txt",
       "has": [{ "type": "host", "value": "baznyciavilniuje.lt" }],
-      "destination": "/_sites/vilnius/robots.txt"
+      "destination": "/robots-vilnius.txt"
     },
     {
       "source": "/robots.txt",
       "has": [{ "type": "host", "value": "baznyciasiauliuose.lt" }],
-      "destination": "/_sites/siauliai/robots.txt"
+      "destination": "/robots-siauliai.txt"
     },
     {
       "source": "/robots.txt",
       "has": [{ "type": "host", "value": "baznyciajonavoje.lt" }],
-      "destination": "/_sites/jonava/robots.txt"
+      "destination": "/robots-jonava.txt"
     },
     {
       "source": "/robots.txt",
       "has": [{ "type": "host", "value": "viespatiesjudejimas.lt" }],
-      "destination": "/_sites/hub/robots.txt"
+      "destination": "/robots-hub.txt"
     },
     {
       "source": "/sitemap.xml",
       "has": [{ "type": "host", "value": "baznyciavilniuje.lt" }],
-      "destination": "/_sites/vilnius/sitemap.xml"
+      "destination": "/sitemap-vilnius.xml"
     },
     {
       "source": "/sitemap.xml",
       "has": [{ "type": "host", "value": "baznyciasiauliuose.lt" }],
-      "destination": "/_sites/siauliai/sitemap.xml"
+      "destination": "/sitemap-siauliai.xml"
     },
     {
       "source": "/sitemap.xml",
       "has": [{ "type": "host", "value": "baznyciajonavoje.lt" }],
-      "destination": "/_sites/jonava/sitemap.xml"
+      "destination": "/sitemap-jonava.xml"
     },
     {
       "source": "/sitemap.xml",
       "has": [{ "type": "host", "value": "viespatiesjudejimas.lt" }],
-      "destination": "/_sites/hub/sitemap.xml"
+      "destination": "/sitemap-hub.xml"
     },
     {
-      "source": "/:path*",
+      "source": "/",
+      "has": [{ "type": "host", "value": "baznyciavilniuje.lt" }],
+      "destination": "/site-vilnius.html"
+    },
+    {
+      "source": "/",
       "has": [{ "type": "host", "value": "baznyciasiauliuose.lt" }],
-      "destination": "/_sites/siauliai/index.html"
+      "destination": "/site-siauliai.html"
     },
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [{ "type": "host", "value": "baznyciajonavoje.lt" }],
-      "destination": "/_sites/jonava/index.html"
+      "destination": "/site-jonava.html"
     },
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [{ "type": "host", "value": "viespatiesjudejimas.lt" }],
-      "destination": "/_sites/hub/index.html"
+      "destination": "/site-hub.html"
     }
   ]
 }
