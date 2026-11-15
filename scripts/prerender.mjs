@@ -9,6 +9,10 @@ import { createServer } from 'vite'
 const projectRoot = fileURLToPath(new URL('..', import.meta.url))
 const outputRoot = path.join(projectRoot, 'dist')
 const template = await readFile(path.join(outputRoot, 'index.html'), 'utf8')
+
+// Match the production build so Vue uses the same scoped-style IDs in SSR markup.
+env.NODE_ENV = 'production'
+
 const vite = await createServer({
   configFile: false,
   root: projectRoot,
