@@ -8,9 +8,7 @@ import Hero from '@/components/layout/Hero.vue'
     <Hero />
     <div class="welcome container">
       <h1>Sveiki atvykę</h1>
-      <h2>
-        Bažnyčia Vilniuje<br/>jus nuoširdžiai sveikina
-      </h2>
+      <h2>Bažnyčia Vilniuje<br />jus nuoširdžiai sveikina</h2>
     </div>
     <p class="container">
       Mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją. Jis
@@ -22,16 +20,15 @@ import Hero from '@/components/layout/Hero.vue'
       <hr class="section-divider" />
       <h2 class="container align-center">Apie mus</h2>
       <p class="container">
-        Mes labai branginame Šventąją Bibliją kaip Dievo apreiškimą apie Save Patį ir apie Savo
-        amžinąjį tikslą. Mes laikomės bendro tikėjimo, apreikšto Biblijoje ir bendro visiems
+        Mes branginame Šventąją Bibliją kaip Dievo apreiškimą apie Save Patį ir apie Savo amžinąjį
+        tikslą. Mes laikomės bendro tikėjimo, apreikšto Biblijoje ir bendro tikėjimo visiems
         tikintiesiems.
       </p>
       <p class="container">
-        <span class="font-italic">Bažnyčia Vilniuje</span> nėra mūsų pavadinimas – tai mūsų apibūdinimas.
-        Todėl šis pavadinimas yra įtraukiantis, o ne atskiriantis. Mes tiesiog renkamės kartu kaip
-        Viešpaties tikintieji šiame mieste ir priimame kaip savo brolius bei seseris visus, kurie
-        tiki Jėzumi Kristumi. Taip pat nuoširdžiai sveikiname svečius ir lankytojus, kurie nėra
-        krikščionys.
+        <span class="font-italic">Bažnyčia Vilniuje</span> nėra mūsų pavadinimas – tai mūsų
+        apibūdinimas. Todėl šis pavadinimas yra įtraukiantis, o ne atskiriantis. Mes renkamės kartu kaip Viešpaties tikintieji šiame mieste ir priimame kaip savo brolius bei
+        seseris visus, kurie tiki Jėzumi Kristumi. Taip pat nuoširdžiai sveikiname svečius ir
+        lankytojus, kurie nėra krikščionys.
       </p>
       <hr class="section-divider" />
     </section>
@@ -77,9 +74,8 @@ import Hero from '@/components/layout/Hero.vue'
           sugrįžti pas Dievą ir mėgautis Juo kaip savo gyvybe ir viskuo.
         </p>
         <p>
-          Sekmadieniais mes susirenkame dalyvauti Viešpaties
-          puotoje (Apd 20:7; 1 Kor 10:16–17) ir ugdyti vieni kitus, dalydamiesi tuo, ką gavo iš
-          Viešpaties (1 Kor 14:26, 4).
+          Sekmadieniais mes susirenkame dalyvauti Viešpaties puotoje (Apd 20:7; 1 Kor 10:16–17) ir
+          ugdyti vieni kitus, dalydamiesi tuo, ką gavome iš Viešpaties (1 Kor 14:26, 4).
         </p>
         <h3 class="align-center">Susirinkimai namuose</h3>
         <p>

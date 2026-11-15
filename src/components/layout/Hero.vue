@@ -11,6 +11,6 @@
   width: 100%;
   height: clamp(220px, 35vw, 300px);
   object-fit: cover;
-  object-position: top;
+  object-position: center;
 }
 </style>
