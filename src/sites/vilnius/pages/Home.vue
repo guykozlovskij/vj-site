@@ -1,6 +1,6 @@
 <script setup>
-import Contact from '@/components/sections/Contact.vue'
-import Hero from '@/components/layout/Hero.vue'
+import Contact from '@/sites/vilnius/components/sections/Contact.vue'
+import Hero from '@/sites/vilnius/layout/Hero.vue'
 </script>
 
 <template>

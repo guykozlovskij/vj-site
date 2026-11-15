@@ -2,16 +2,18 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 
-// import { useLanguage } from '@/composables/useLanguage'
-// const { currentLanguage, setLanguage } = useLanguage()
+defineProps({
+  brand: {
+    type: String,
+    required: true,
+  },
+  items: {
+    type: Array,
+    default: () => [],
+  },
+})
 
 const isMenuOpen = ref(false)
-
-const navItems = [
-  { label: 'Pagrindinis', to: '/' },
-  { label: 'Tarnavimas', to: '/page-1' },
-  { label: 'Kalendorius', to: '/page-2' },
-]
 
 function closeMenu() {
   isMenuOpen.value = false
@@ -36,11 +38,11 @@ onUnmounted(() => {
   <!-- Top navigation -->
   <header class="site-header">
     <div class="nav-content">
-      <RouterLink to="/" class="brand-link"> Bažnyčia Vilniuje </RouterLink>
+      <RouterLink to="/" class="brand-link">{{ brand }}</RouterLink>
 
       <!-- Desktop navigation -->
       <nav class="desktop-navigation" aria-label="Main navigation">
-        <RouterLink v-for="item in navItems" :key="item.to" :to="item.to" class="nav-link">
+        <RouterLink v-for="item in items" :key="item.to" :to="item.to" class="nav-link">
           {{ item.label }}
         </RouterLink>
       </nav>
@@ -86,7 +88,7 @@ onUnmounted(() => {
     <div v-if="isMenuOpen" id="mobile-navigation" class="mobile-drawer">
       <nav class="mobile-navigation" aria-label="Mobile navigation">
         <RouterLink
-          v-for="item in navItems"
+          v-for="item in items"
           :key="item.to"
           :to="item.to"
           class="nav-link"
@@ -103,7 +105,7 @@ onUnmounted(() => {
 /* Top navigation */
 
 .site-header {
-  background-color: $nav-color;
+  background-color: var(--nav-background-color, #{$nav-color});
   position: fixed;
   height: $nav-height;
   top: 0;
@@ -128,7 +130,7 @@ onUnmounted(() => {
 
   .brand-link {
     font: $accent-text-font;
-    color: $accent-text-color;
+    color: var(--nav-text-color, #{$accent-text-color});
     font-size: 20px;
     font-style: italic;
     font-weight: 500;
@@ -153,7 +155,7 @@ onUnmounted(() => {
 /* Navigation links */
 
 .nav-link {
-  color: $accent-text-color;
+  color: var(--nav-text-color, #{$accent-text-color});
   text-decoration: none;
   font-size: 16px;
 
@@ -199,7 +201,7 @@ onUnmounted(() => {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: $accent-text-color;
+    background-color: var(--nav-text-color, #{$accent-text-color});
 
     transition:
       transform 0.25s ease,
@@ -226,7 +228,7 @@ onUnmounted(() => {
   }
 
   &:focus-visible {
-    outline: 2px solid $accent-text-color;
+    outline: 2px solid var(--nav-text-color, #{$accent-text-color});
     outline-offset: 3px;
   }
 
@@ -283,7 +285,7 @@ onUnmounted(() => {
   width: min(70vw, 280px);
   padding: 25px 20px;
 
-  background-color: $nav-color;
+  background-color: var(--nav-background-color, #{$nav-color});
 
   /* Shadow cast to the left */
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
@@ -307,7 +309,7 @@ onUnmounted(() => {
 
     &:hover,
     &.router-link-active {
-      background-color: rgba(238, 232, 220, 0.1);
+      background-color: var(--nav-link-hover-background, rgba(238, 232, 220, 0.1));
     }
   }
 }

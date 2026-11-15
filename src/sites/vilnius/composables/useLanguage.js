@@ -1,5 +1,5 @@
 import { ref, computed } from 'vue'
-import { locales } from '@/locales'
+import { locales } from '@/sites/vilnius/locales'
 
 const currentLanguage = ref('lt')
 

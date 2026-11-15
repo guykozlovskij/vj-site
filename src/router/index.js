@@ -1,24 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '../components/views/Home.vue'
-import PageOne from '../components/views/PageOne.vue'
-import PageTwo from '../components/views/PageTwo.vue'
+import Home from '@/sites/vilnius/pages/Home.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: Home,
-  },
-  {
-    path: '/page-1',
-    name: 'page-one',
-    component: PageOne,
-  },
-  {
-    path: '/page-2',
-    name: 'page-two',
-    component: PageTwo,
   },
 ]
 
