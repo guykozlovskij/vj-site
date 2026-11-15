@@ -1,11 +1,14 @@
 <script setup>
 import Nav from '@/shared/components/Nav.vue'
+import { currentSite } from '@/sites'
 import { RouterView } from 'vue-router'
-
-const navigationItems = [{ label: 'Pagrindinis', to: '/' }]
 </script>
 
 <template>
-  <Nav brand="Bažnyčia Vilniuje" :items="navigationItems" />
+  <Nav
+    v-if="currentSite?.navigation"
+    :brand="currentSite.navigation.brand"
+    :items="currentSite.navigation.items"
+  />
   <RouterView />
 </template>

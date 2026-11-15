@@ -1,14 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '@/sites/vilnius/pages/Home.vue'
+import { currentSite } from '@/sites'
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home,
-  },
-]
+const routes = currentSite
+  ? [{ path: '/', name: 'home', component: currentSite.home }]
+  : []
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
