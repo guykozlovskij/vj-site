@@ -1,5 +1,5 @@
 <script setup>
-import Contact from '@/sites/vilnius/components/sections/Contact.vue'
+import Contact from '@/shared/components/Contact.vue'
 import Hero from '@/sites/vilnius/layout/Hero.vue'
 </script>
 
@@ -26,9 +26,10 @@ import Hero from '@/sites/vilnius/layout/Hero.vue'
       </p>
       <p class="container">
         <span class="font-italic">Bažnyčia Vilniuje</span> nėra mūsų pavadinimas – tai mūsų
-        apibūdinimas. Todėl šis pavadinimas yra įtraukiantis, o ne atskiriantis. Mes renkamės kartu kaip Viešpaties tikintieji šiame mieste ir priimame kaip savo brolius bei
-        seseris visus, kurie tiki Jėzumi Kristumi. Taip pat nuoširdžiai sveikiname svečius ir
-        lankytojus, kurie nėra krikščionys.
+        apibūdinimas. Todėl šis pavadinimas yra įtraukiantis, o ne atskiriantis. Mes renkamės kartu
+        kaip Viešpaties tikintieji šiame mieste ir priimame kaip savo brolius bei seseris visus,
+        kurie tiki Jėzumi Kristumi. Taip pat nuoširdžiai sveikiname svečius ir lankytojus, kurie
+        nėra krikščionys.
       </p>
       <hr class="section-divider" />
     </section>
@@ -93,6 +94,7 @@ import Hero from '@/sites/vilnius/layout/Hero.vue'
 .welcome {
   text-align: center;
   font-style: italic;
+  color: var(--heading-color, $main-text-content-color);
   h1 {
     font-size: 45px;
     margin-bottom: -10px;
@@ -103,8 +105,10 @@ import Hero from '@/sites/vilnius/layout/Hero.vue'
 }
 h2 {
   font-size: 35px;
+  color: var(--heading-color, $main-text-content-color);
 }
 h3 {
   font-size: 25px;
+  color: var(--heading-color, $main-text-content-color);
 }
 </style>

@@ -4,13 +4,6 @@
   <section>
     <div class="container">
       <h2 class="align-center">Susisiekite su mumis</h2>
-      <p>Mūsų susirinkimai vyksta trijuose Lietuvos miestuose:</p>
-      <ul>
-        <li>Vilniuje</li>
-        <li>Šiauliuose</li>
-        <li>Jonavoje</li>
-      </ul>
-
       <p>
         Jei norėtumėte apsilankyti mūsų susirinkime, daugiau sužinoti apie mus ar tiesiog
         pabendrauti apie tikėjimą, parašykite mums el. paštu. <br />Sujungsime jus su tikinčiaisiais
@@ -33,7 +26,7 @@
 @use 'sass:color';
 
 h2 {
-  color: $accent-text-color;
+  color: var(--accent-text-color, $accent-text-color);
   font-style: italic;
   font-size: 50px;
 }
@@ -47,7 +40,7 @@ h2 {
   padding: 35px 25px;
   margin: 40px auto;
 
-  background: rgba(58, 44, 33, 0.05);
+  background: var(--contact-card-background-color, rgba(58, 44, 33, 0.05));
   border-radius: 8px;
 
   .email-label {
@@ -56,7 +49,7 @@ h2 {
   }
 
   .email-address {
-    color: rgb(48, 44, 39);
+    color: var(--contact-email-color, rgb(48, 44, 39));
     font-size: 20px;
     text-decoration: none;
     margin-bottom: 24px;
@@ -72,14 +65,15 @@ h2 {
     padding: 13px 30px;
     border-radius: 5px;
 
-    background-color: $accent-text-color;
+    background-color: var(--accent-text-color, $accent-text-color);
     color: $background-color;
 
     font-weight: 600;
     text-decoration: none;
 
     box-shadow:
-      0 4px 0 color.adjust($accent-text-color, $lightness: -12%),
+      0 4px 0
+        var(--contact-button-shadow-color, #{color.adjust($accent-text-color, $lightness: -12%)}),
       0 5px 10px rgba(0, 0, 0, 0.15);
 
     transition:
@@ -88,21 +82,26 @@ h2 {
       background-color 0.15s ease;
 
     &:hover {
-      background-color: color.adjust($accent-text-color, $lightness: -5%);
+      background-color: var(
+        --contact-button-hover-color,
+        #{color.adjust($accent-text-color, $lightness: -5%)}
+      );
       transform: translateY(-2px);
 
       box-shadow:
-        0 6px 0 color.adjust($accent-text-color, $lightness: -12%),
+        0 6px 0
+          var(--contact-button-shadow-color, #{color.adjust($accent-text-color, $lightness: -12%)}),
         0 8px 14px rgba(0, 0, 0, 0.18);
     }
 
     &:active {
       transform: translateY(2px);
-      box-shadow: 0 1px 0 color.adjust($accent-text-color, $lightness: -12%);
+      box-shadow: 0 1px 0
+        var(--contact-button-shadow-color, #{color.adjust($accent-text-color, $lightness: -12%)});
     }
 
     &:focus-visible {
-      outline: 3px solid $accent-text-color;
+      outline: 3px solid var(--accent-text-color, $accent-text-color);
       outline-offset: 4px;
     }
   }

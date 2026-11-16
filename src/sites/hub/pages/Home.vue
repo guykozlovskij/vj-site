@@ -1,22 +1,20 @@
-<script setup>
-const localities = [
-  { label: 'Bažnyčia Vilniuje', href: 'https://baznyciavilniuje.lt' },
-  { label: 'Bažnyčia Šiauliuose', href: 'https://baznyciasiauliuose.lt' },
-  { label: 'Bažnyčia Jonavoje', href: 'https://baznyciajonavoje.lt' },
-]
-</script>
-
 <template>
   <main class="hub-home">
     <h1 class="visually-hidden">Viešpaties Judėjimas</h1>
     <div class="locality-cards">
-      <a
-        v-for="locality in localities"
-        :key="locality.href"
-        :href="locality.href"
-        class="locality-card"
-      >
-        <h2 class="locality-card__label">{{ locality.label }}</h2>
+      <a href="https://baznyciavilniuje.lt/" class="locality-card">
+        <img class="locality-card__image" src="/images/vilnius-banner.webp" alt="" />
+        <h2 class="locality-card__label">Bažnyčia Vilniuje</h2>
+        <span class="locality-card__chevron" aria-hidden="true"></span>
+      </a>
+      <a href="https://baznyciasiauliuose.lt/" class="locality-card">
+        <img class="locality-card__image" src="/images/siauliai-banner.webp" alt="" />
+        <h2 class="locality-card__label">Bažnyčia Šiauliuose</h2>
+        <span class="locality-card__chevron" aria-hidden="true"></span>
+      </a>
+      <a href="https://baznyciajonavoje.lt/" class="locality-card">
+        <img class="locality-card__image" src="/images/jonava-banner.webp" alt="" />
+        <h2 class="locality-card__label">Bažnyčia Jonavoje</h2>
         <span class="locality-card__chevron" aria-hidden="true"></span>
       </a>
     </div>
@@ -58,7 +56,9 @@ const localities = [
   gap: 24px;
   padding: clamp(24px, 5vw, 48px);
   border-radius: 14px;
-  background: linear-gradient(110deg, #827665, #a69a87);
+  position: relative;
+  overflow: hidden;
+  background: #827665;
   color: #fff;
   text-decoration: none;
   transition: filter 0.2s ease;
@@ -74,13 +74,34 @@ const localities = [
   }
 }
 
+.locality-card::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(44, 35, 27, 0.62), rgba(44, 35, 27, 0.2));
+  content: '';
+  z-index: 1;
+}
+
+.locality-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
 .locality-card__label {
+  position: relative;
+  z-index: 2;
   margin: 0;
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-size: clamp(24px, 4vw, 40px);
 }
 
 .locality-card__chevron {
+  position: relative;
+  z-index: 2;
   width: 18px;
   height: 18px;
   flex: 0 0 auto;

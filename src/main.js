@@ -11,6 +11,7 @@ const site = sites[siteId]
 
 if (import.meta.env.DEV) {
   document.documentElement.lang = 'lt'
+  document.documentElement.dataset.site = siteId
   document.title = site.title
   document.querySelector('meta[name="description"]')?.setAttribute('content', site.description)
   document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://${site.hostname}/`)

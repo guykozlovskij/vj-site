@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 .container {
   width: 100%;
@@ -7,15 +7,15 @@
   padding-inline: 15px;
 }
 
-.alt-background{
-  background: $alt-background-color;
+.alt-background {
+  background: var(--section-background-color, $alt-background-color);
 }
 
 .section-divider {
   width: 100%;
   height: 0.5px;
   border: none;
-  background-color: rgba(58, 44, 33, 0.1);
+  background-color: var(--divider-color, rgba(58, 44, 33, 0.1));
   margin: 40px 0;
 }
 

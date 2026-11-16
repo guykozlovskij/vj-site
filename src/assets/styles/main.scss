@@ -1,8 +1,61 @@
-@use "base";
-@use "typography";
+@use 'sass:color';
+
+@use 'base';
+@use 'typography';
 
 // Font imports
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --page-background-color: #f4f0e8;
+  --page-text-color: rgb(58 44 33);
+  --heading-color: rgb(58 44 33);
+  --section-background-color: rgb(218 209 190 / 0.55);
+  --accent-text-color: rgb(101 28 25);
+  --hyperlink-color: rgb(127 37 32);
+  --divider-color: rgba(58, 44, 33, 0.1);
+  --nav-background-color: rgb(242 234 210);
+  --nav-text-color: rgb(101 28 25);
+  --nav-link-hover-background: rgba(238, 232, 220, 0.1);
+  --contact-card-background-color: rgba(58, 44, 33, 0.05);
+  --contact-email-color: rgb(48, 44, 39);
+  --contact-button-hover-color: #{color.adjust($accent-text-color, $lightness: -5%)};
+  --contact-button-shadow-color: #{color.adjust($accent-text-color, $lightness: -12%)};
+}
+
+:root[data-site='siauliai'] {
+  --page-background-color: #f2f5f1;
+  --page-text-color: #38453a;
+  --heading-color: #344b37;
+  --section-background-color: #e0e8dd;
+  --accent-text-color: #506e52;
+  --hyperlink-color: #536f54;
+  --divider-color: rgba(56, 69, 58, 0.13);
+  --nav-background-color: #e2ebdf;
+  --nav-text-color: #415f45;
+  --nav-link-hover-background: rgba(65, 95, 69, 0.1);
+  --contact-card-background-color: rgba(80, 110, 82, 0.06);
+  --contact-email-color: var(--hyperlink-color);
+  --contact-button-hover-color: rgb(69.2632 95.2368 70.9947);
+  --contact-button-shadow-color: rgb(54.2316 74.5684 55.5874);
+}
+
+:root[data-site='jonava'] {
+  --page-background-color: #f2f4f7;
+  --page-text-color: #3e4857;
+  --heading-color: #384f6e;
+  --section-background-color: #e1e7ef;
+  --accent-text-color: #55749b;
+  --hyperlink-color: #4e709c;
+  --divider-color: rgba(62, 72, 87, 0.13);
+  --nav-background-color: #e3eaf2;
+  --nav-text-color: #405f89;
+  --nav-link-hover-background: rgba(64, 95, 137, 0.1);
+  --contact-card-background-color: rgba(85, 116, 155, 0.06);
+  --contact-email-color: var(--hyperlink-color);
+  --contact-button-hover-color: #{color.adjust(#55749b, $lightness: -5%)};
+  --contact-button-shadow-color: #{color.adjust(#55749b, $lightness: -12%)};
+}
 
 *,
 *::before,
@@ -17,13 +70,14 @@ html {
 body {
   margin: 0;
   font-family: $main-text-content-font;
-  color: $main-text-content-color;
-  background-color: $background-color;
+  color: var(--page-text-color, $main-text-content-color);
+  background-color: var(--page-background-color, $background-color);
 }
 
 main {
   padding-top: $nav-height;
-  p, li {
+  p,
+  li {
     font-size: larger;
   }
 }

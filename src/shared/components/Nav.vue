@@ -307,8 +307,7 @@ onUnmounted(() => {
     border-radius: 4px;
     font-size: 24px;
 
-    &:hover,
-    &.router-link-active {
+    &:hover {
       background-color: var(--nav-link-hover-background, rgba(238, 232, 220, 0.1));
     }
   }

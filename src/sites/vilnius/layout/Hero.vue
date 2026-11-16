@@ -1,7 +1,6 @@
 <script setup></script>
 
 <template>
-<!--  <img class="banner-image" src="/images/lithuania-banner.webp" alt="ltu image" />-->
   <img class="banner-image" src="/images/vilnius-banner.webp" alt="vilnius banner" />
 </template>
 
@@ -11,6 +10,10 @@
   width: 100%;
   height: clamp(220px, 35vw, 300px);
   object-fit: cover;
-  object-position: center;
+  object-position: top;
+
+  @media (min-width: 1700px) {
+    object-position: center 20%;
+  }
 }
 </style>

@@ -67,6 +67,7 @@ try {
     const html = template
       .replace('<!--app-html-->', appHtml)
       .replaceAll('__SITE_LANGUAGE__', 'lt')
+      .replaceAll('__SITE_ID__', siteId)
       .replaceAll('__SITE_TITLE__', escapeHtml(site.title))
       .replaceAll('__SITE_DESCRIPTION__', escapeHtml(site.description))
       .replaceAll('__CANONICAL_URL__', `https://${site.hostname}/`)

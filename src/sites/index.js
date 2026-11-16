@@ -19,13 +19,23 @@ export const sites = {
     home: SiauliaiHome,
     hostname: 'baznyciasiauliuose.lt',
     title: 'Bažnyčia Šiauliuose',
-    description: 'Bažnyčia Šiauliuose. Puslapis kuriamas.',
+    description:
+      'Mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją.',
+    navigation: {
+      brand: 'Bažnyčia Šiauliuose',
+      items: [{ label: 'Pagrindinis', to: '/' }],
+    },
   },
   jonava: {
     home: JonavaHome,
     hostname: 'baznyciajonavoje.lt',
     title: 'Bažnyčia Jonavoje',
-    description: 'Bažnyčia Jonavoje. Puslapis kuriamas.',
+    description:
+      'Mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją.',
+    navigation: {
+      brand: 'Bažnyčia Jonavoje',
+      items: [{ label: 'Pagrindinis', to: '/' }],
+    },
   },
   hub: {
     home: HubHome,
