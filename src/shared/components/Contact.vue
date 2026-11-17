@@ -6,8 +6,7 @@
       <h2 class="align-center">Susisiekite su mumis</h2>
       <p>
         Jei norėtumėte apsilankyti mūsų susirinkime, daugiau sužinoti apie mus ar tiesiog
-        pabendrauti apie tikėjimą, parašykite mums el. paštu. <br />Sujungsime jus su tikinčiaisiais
-        jūsų mieste.
+        pabendrauti apie tikėjimą, parašykite mums el. paštu.
       </p>
       <div class="email-contact">
         <p class="email-label">El. paštas</p>
