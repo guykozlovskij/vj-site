@@ -9,7 +9,7 @@ export const sites = {
     hostname: 'baznyciavilniuje.lt',
     title: 'Bažnyčia Vilniuje',
     description:
-      'Mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją.',
+      'Bažnyčia Vilniuje – mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją ir susirenkantys kartu bažnyčios gyvenimui.',
     navigation: {
       brand: 'Bažnyčia Vilniuje',
       items: [{ label: 'Pagrindinis', to: '/' }],
@@ -20,7 +20,7 @@ export const sites = {
     hostname: 'baznyciasiauliuose.lt',
     title: 'Bažnyčia Šiauliuose',
     description:
-      'Mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją.',
+      'Bažnyčia Šiauliuose – mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją ir susirenkantys kartu bažnyčios gyvenimui.',
     navigation: {
       brand: 'Bažnyčia Šiauliuose',
       items: [{ label: 'Pagrindinis', to: '/' }],
@@ -31,7 +31,7 @@ export const sites = {
     hostname: 'baznyciajonavoje.lt',
     title: 'Bažnyčia Jonavoje',
     description:
-      'Mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją.',
+      'Bažnyčia Jonavoje – mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją ir susirenkantys kartu bažnyčios gyvenimui.',
     navigation: {
       brand: 'Bažnyčia Jonavoje',
       items: [{ label: 'Pagrindinis', to: '/' }],

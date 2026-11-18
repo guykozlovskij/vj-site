@@ -7,8 +7,11 @@ import Hero from '@/sites/vilnius/layout/Hero.vue'
   <main>
     <Hero />
     <div class="welcome container">
-      <h1>Sveiki atvykę</h1>
-      <h2>Bažnyčia Vilniuje<br />jus nuoširdžiai sveikina</h2>
+      <h1>
+        <span class="welcome-title">Sveiki atvykę</span>
+        <span class="church-title">Bažnyčia Vilniuje</span>
+        <span class="welcome-message">jus nuoširdžiai sveikina</span>
+      </h1>
     </div>
     <p class="container">
       Mes esame tikintieji Viešpatyje Jėzuje Kristuje, asmeniškai priėmę Jį kaip savo Gelbėtoją. Jis
@@ -96,11 +99,18 @@ import Hero from '@/sites/vilnius/layout/Hero.vue'
   font-style: italic;
   color: var(--heading-color, $main-text-content-color);
   h1 {
-    font-size: 45px;
-    margin-bottom: -10px;
-  }
-  h2 {
-    font-size: 30px;
+    padding-top: 10px;
+    span {
+      display: block;
+    }
+    .welcome-title {
+      font-size: 45px;
+      padding-bottom: 15px;
+    }
+    .church-title,
+    .welcome-message {
+      font-size: 30px;
+    }
   }
 }
 h2 {
